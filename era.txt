@@ -1,0 +1,60 @@
+******ELECTRONIC REMITTANCE ADVICE******
+
+Payer: Medicare
+Payment Amount: $2,443.01
+Payment ID: INV-207B-H&1
+Vendor ID: 173829
+Vendor Name: Sample Medical Practice
+
+Payment Details:
+- Payment Method: Electronic Funds Transfer (EFT)
+- Payment Date: 2024-12-20
+- Account Number: XXXX1234
+
+Claim Details:
+
+1. Claim Number: CLM123456
+   Patient Name: John Doe
+   Date of Service: 2024-12-01
+   Procedure Code: 99213 (Office visit, established patient)
+   Billed Amount: $150.00
+   Allowed Amount: $85.00
+   Patient Responsibility: $20.00 (Copay)
+   Paid Amount: $65.00
+   Adjustment: -$65.00
+   CARC: CO-45 (Charge exceeds fee schedule/maximum allowable)
+   RARC: N30 (Patient ineligible for this service)
+
+2. Claim Number: CLM789012
+   Patient Name: Jane Smith
+   Date of Service: 2024-12-05
+   Procedure Code: 85025 (Complete blood count)
+   Billed Amount: $50.00
+   Allowed Amount: $30.00
+   Patient Responsibility: $0.00
+   Paid Amount: $30.00
+   Adjustment: -$20.00
+   CARC: CO-45 (Charge exceeds fee schedule/maximum allowable)
+
+3. Claim Number: CLM345678
+   Patient Name: Robert Johnson
+   Date of Service: 2024-12-10
+   Procedure Code: 73030 (X-ray, shoulder, 2 views)
+   Billed Amount: $75.00
+   Allowed Amount: $0.00
+   Patient Responsibility: $0.00
+   Paid Amount: $0.00
+   Adjustment: -$75.00
+   CARC: CO-50 (Not deemed a medical necessity)
+   RARC: N10 (Payment based on the findings of a review organization)
+
+Total Billed Amount: $275.00
+Total Allowed Amount: $115.00
+Total Patient Responsibility: $20.00
+Total Paid Amount: $95.00
+Total Adjustments: -$160.00
+
+If you have any questions regarding this remittance advice, please contact our Provider Services department at 1-800-555-1234 or email providerservices@medicare.gov.
+
+Thank you,
+Medicare Claims Processing Department

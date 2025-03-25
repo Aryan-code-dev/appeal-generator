@@ -1,0 +1,71 @@
+{
+    "Patient Name": "Robert Johnson",
+    "DOB": "07/15/1960",
+    "Date of Service": "2024-12-10",
+    "Provider": "Dr. Jane Provider, MD",
+    "Chief Complaint (CC)": "Left shoulder pain and limited range of motion.",
+    "History of Present Illness (HPI)": (
+        "Mr. Robert Johnson is a 64-year-old male presenting with a 3-week history of "
+        "progressive left shoulder pain. He reports that the discomfort began after slipping "
+        "on ice and catching himself with his left arm extended. Since then, he has experienced "
+        "intermittent, dull to sharp pain localized to the anterior and lateral aspects of the "
+        "left shoulder. The pain is worse with overhead activities, lying on the affected side, "
+        "and during attempts to lift moderately heavy objects. He denies numbness, tingling, or "
+        "referred pain down the arm. Over-the-counter NSAIDs have provided only partial relief. "
+        "There is no history of recent fevers, unexplained weight loss, or prior shoulder surgeries. "
+        "He has no known allergies and no recent changes in his daily activities, aside from avoiding "
+        "certain movements due to discomfort."
+    ),
+    "Review of Systems (ROS)": {
+        "Musculoskeletal": "Reports left shoulder pain as described in HPI; denies joint swelling or redness in other joints.",
+        "Neurological": "Denies numbness, tingling, or weakness distally in the left arm.",
+        "General": "Denies fever, chills, weight loss.",
+        "Cardiovascular and Respiratory": "No chest pain, palpitations, shortness of breath, or wheezing.",
+        "Other Systems": "All other systems reviewed and negative unless noted above."
+    },
+    "Vital Signs": {
+        "Blood Pressure": "124/76 mmHg",
+        "Heart Rate": "76 bpm",
+        "Respiratory Rate": "16/min",
+        "Temperature": "98.5°F (36.9°C)",
+        "Oxygen Saturation": "98% on room air"
+    },
+    "Physical Examination": {
+        "General": "Appears alert and in no acute distress, though guards the left shoulder somewhat when moving.",
+        "Left Shoulder": {
+            "Inspection": "No visible swelling, redness, or deformity.",
+            "Palpation": "Tenderness over the anterior aspect of the left shoulder and mildly over the greater tuberosity region.",
+            "Range of Motion": (
+                "Forward flexion and abduction limited by about 20% compared to the right shoulder due to pain. "
+                "Pain is elicited at approximately 90° of abduction and with internal rotation maneuvers."
+            ),
+            "Special Tests": (
+                "Positive painful arc test at around 80-100° of abduction. Mild discomfort with Neer’s and Hawkins’ "
+                "tests suggest possible impingement. No gross instability but difficulty maintaining full abduction "
+                "against resistance suggests possible rotator cuff involvement."
+            )
+        },
+        "Cardiovascular": "Regular rate and rhythm, no murmurs.",
+        "Respiratory": "Clear to auscultation bilaterally, no wheezes, rales, or rhonchi."
+    },
+    "Results (Prior to Imaging)": (
+        "No lab work has been performed at this visit. No prior imaging studies of the shoulder available "
+        "for comparison."
+    ),
+    "Orders": [
+        "Order left shoulder X-ray (AP and scapular Y views) to assess bony anatomy and look for any structural abnormalities.",
+        "Prescribe a short course of NSAIDs for pain control (as tolerated).",
+        "Recommend physical therapy consultation focusing on rotator cuff strengthening, scapular stabilization exercises, and stretching."
+    ],
+    "Assessment and Plan": {
+        "Assessment": (
+            "Likely rotator cuff tendinopathy/subacromial impingement secondary to a fall, with ongoing pain "
+            "and limited range of motion. Need to rule out subtle fracture or bony abnormalities."
+        ),
+        "Plan": [
+            "Obtain left shoulder X-ray (2 views) to evaluate osseous structures and exclude fractures or significant degenerative changes.",
+            "Continue conservative management with NSAIDs and PT referral.",
+            "Follow-up in 2-3 weeks or sooner if symptoms worsen. Consider MRI if X-ray is unremarkable and symptoms persist."
+        ]
+    }
+}
