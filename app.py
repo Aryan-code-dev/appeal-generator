@@ -230,20 +230,28 @@ def generate_appeal_with_iterative_validation(claim, clinical_note, max_attempts
     iteration_prompt += f"Guidelines:\n"
         
     # Add specific guidance based on previous validation attempts
-    guidance_prompts = "Generate a professional, compelling appeal letter arguing the medical necessity of the procedure.Ensure the appeal letter explicitly mentions the patient's name and claim number. Use a more persuasive and professional tone that clearly demonstrates medical necessity.Critically analyze the clinical evidence and craft a highly detailed appeal.Include specific medical justifications, quote clinical findings, and use technical medical language. "
+    guidance_prompts = "Generate a professional, compelling appeal letter arguing the medical necessity of the procedure. Ensure the appeal letter explicitly mentions the patient's name and claim number. Use a more persuasive and professional tone that clearly demonstrates medical necessity. Critically analyze the clinical evidence and craft a highly detailed appeal. Include specific medical justifications, quote clinical findings, and use technical medical language. Only provide appeal letter content in the response."
     
     iteration_prompt += guidance_prompts
+    
+    previous_appeal = None
+    validation_results = {}
     
     for attempt in range(max_attempts):
         iteration_prompt += f"\n\nAttempt {attempt + 1}:\n"
         print("Attempt:", attempt + 1)
+        
+        # If there's a previous appeal, add it to the context
+        if previous_appeal:
+            iteration_prompt += f"\nPrevious Appeal Attempt:\n{previous_appeal}\n"
+        
         # Dynamically add feedback from previous validations
         additional_notes = []
         
-    
         # Generate appeal with iterative guidance
         response = model.generate_content(iteration_prompt)
         appeal_letter = response.text
+        previous_appeal = appeal_letter
         
         # Validate the generated letter
         validation_results = validate_appeal_letter(
@@ -251,6 +259,8 @@ def generate_appeal_with_iterative_validation(claim, clinical_note, max_attempts
             clinical_note["Patient Name"], 
             claim["Claim Number"], 
         )
+        
+        # Add specific improvement notes based on validation
         if not validation_results["patient_name_match"]:
             additional_notes.append(
                 "Note: Previous attempt did not clearly include patient name. "
