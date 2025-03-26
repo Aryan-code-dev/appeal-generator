@@ -100,6 +100,7 @@ def extract_clinical_note(text):
     return clinical_note
 
 def extract_claims(text):
+    """Extracts structured data from the ERA using regex with fallback values."""
     claims = []
     claim_blocks = re.split(r"\n\d+\. Claim Number: ", text)[1:]
     
@@ -129,7 +130,7 @@ def extract_claims(text):
     return claims
 
 
-def validate_appeal_letter(appeal_letter, patient_name, claim_number, clinical_note):
+def validate_appeal_letter(appeal_letter, patient_name, claim_number):
     """
     Validate the generated appeal letter for key details and sentiment.
     
@@ -137,7 +138,6 @@ def validate_appeal_letter(appeal_letter, patient_name, claim_number, clinical_n
         appeal_letter (str): Generated appeal letter
         patient_name (str): Expected patient name
         claim_number (str): Expected claim number
-        clinical_note (dict): Clinical note details
     
     Returns:
         dict: Validation results
@@ -250,7 +250,6 @@ def generate_appeal_with_iterative_validation(claim, clinical_note, max_attempts
             appeal_letter, 
             clinical_note["Patient Name"], 
             claim["Claim Number"], 
-            clinical_note
         )
         if not validation_results["patient_name_match"]:
             additional_notes.append(
